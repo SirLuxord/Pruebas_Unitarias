@@ -22,4 +22,5 @@ public class Cuenta_Bancaria_test {
     @Test
     void testgetSaldo() {
         assertEquals(2500.00, test.getSaldo());
+    }
 }

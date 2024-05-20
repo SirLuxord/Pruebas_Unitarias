@@ -161,14 +161,14 @@ public class Cuenta_Bancaria{
 				this.saldo = this.saldo + dinero;
 			} else {
 				System.out.println("Debes utilizar un número positivo mayor que 0");
+				Main.entrada.nextLine();
+				System.out.println("¿Cuanto dinero quieres ingresar en la cuenta?");
+				Double dinero2 = Main.entrada.nextDouble();
+				this.sumarSaldo(dinero2);
 			}
 		} catch (InputMismatchException e) {
 			System.out.println("Debes utilizar un número positivo mayor que 0, y en caso "+
 			"de tener decimales tienes que usar la coma \",\" y no el punto.");
-			Main.entrada.nextLine();
-			System.out.println("¿Cuanto dinero quieres ingresar en la cuenta?");
-			Double dinero2 = Main.entrada.nextDouble();
-			this.sumarSaldo(dinero2);;
 		}
 		return this.saldo;
 	}

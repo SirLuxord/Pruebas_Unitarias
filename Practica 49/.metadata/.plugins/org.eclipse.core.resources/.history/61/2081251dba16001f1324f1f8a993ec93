@@ -1,0 +1,24 @@
+
+import org.junit.jupiter.api.Assertions;
+
+public class Cuenta_Bancaria_test {
+	
+	private Cuenta_Bancaria test; 
+
+	void init() {
+		test = new Cuenta_Bancaria("Manolo","85579922T","1500 4300 00 2056100328", 2500.00);
+	}
+	
+	testSumarSaldo() {
+        Assertions.assertEquals(3500.00, test.sumarSaldo(1000.00));
+    }
+	
+	void testrestarSaldo() { 
+		Assertions.assertEquals(1500.00, test.restarSaldo(1000.00));
+    }
+	
+
+    void testgetSaldo() {
+    	Assertions.assertEquals(2500.00, test.getSaldo());
+    }
+}
